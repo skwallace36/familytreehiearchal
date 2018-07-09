@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-tree',
+  templateUrl: './tree.component.html',
+  styleUrls: ['./tree.component.scss']
 })
-export class AppComponent {
-  title = 'app';
-  public nodeList = [
+export class TreeComponent implements OnInit {
+  public node = [
     {name: 'production', children: [
       {name: 'test one', children: [
         {name: 'development one', children: []},
@@ -24,4 +23,9 @@ export class AppComponent {
       ]}
     ]}
   ];
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }

@@ -1,0 +1,86 @@
+<div class="hv-container">
+  <div class="hv-wrapper">
+    <div *ngFor="let node of nodelist">
+      <div class="hv-item">
+        <div *ngIf="node.children.length > 0">
+            <div class="hv-item-parent">
+              <p class="simple-card"> {{node.name}} </p>
+            </div>
+            <div class="hv-item-children">
+              <app-nodes [nodelist]=node.children></app-nodes>
+            </div>
+        </div>
+        <div *ngIf="node.children.length === 0">
+          <div class="hv-item-child">
+            <p class="simple-card"> {{node.name}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="hv-container">
+    <div class="hv-wrapper">
+
+
+        <div class="hv-item">
+
+            <div class="hv-item-parent">
+                <p class="simple-card"> Production </p>
+            </div>
+
+            <div class="hv-item-children">
+
+                <div class="hv-item-child">
+
+                    <div class="hv-item">
+
+                        <div class="hv-item-parent">
+                            <p class="simple-card"> Test One </p>
+                        </div>
+
+                        <div class="hv-item-children">
+
+                            <div class="hv-item-child">
+                                <p class="simple-card"> development one </p>
+                            </div>
+
+                            <div class="hv-item-child">
+                                <p class="simple-card"> development two </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="hv-item-child">
+
+                  <div class="hv-item">
+
+                      <div class="hv-item-parent">
+                          <p class="simple-card"> Test Two </p>
+                      </div>
+
+                      <div class="hv-item-children">
+
+                          <div class="hv-item-child">
+                              <p class="simple-card"> development three </p>
+                          </div>
+
+                          <div class="hv-item-child">
+                              <p class="simple-card"> development four </p>
+                          </div>
+
+                      </div>
+
+                  </div>
+              </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div> -->
